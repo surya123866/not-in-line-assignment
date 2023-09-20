@@ -1,0 +1,237 @@
+@import "../../style-config/mixins.scss";
+@import "../../style-config/variable.scss";
+
+.hero-container {
+  display: flex;
+  justify-content: space-around;
+  width: 1440px;
+  height: 855px;
+  flex-shrink: 0;
+  background: linear-gradient(
+    90deg,
+    #75cfff -17.97%,
+    rgba(117, 207, 255, 0) 54.75%
+  );
+  padding: 32px;
+
+  .left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 32px;
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      width: 470px;
+      height: 420px;
+      flex-shrink: 0;
+      border-radius: 34px;
+      background: #fff;
+      box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+      gap: 32px;
+      h1 {
+        width: 307px;
+        color: #2f2f2f;
+        font-family: "Montserrat";
+        @include typography(20px, 500, 30px);
+        font-style: normal;
+        text-align: center;
+      }
+      .input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 46px;
+          height: 45.021px;
+          flex-shrink: 0;
+        }
+        input {
+          width: 299px;
+          height: 47px;
+          flex-shrink: 0;
+          border-radius: 5px;
+          background: #e3e3e3;
+          border: none;
+          outline: none;
+          color: #6e6e6e;
+          font-family: "Montserrat";
+          @include typography(12px, 400, 15px);
+          font-style: normal;
+          padding-left: 20px;
+        }
+      }
+      .checkbox-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+        .checkbox {
+          width: 22px;
+          height: 22px;
+          flex-shrink: 0;
+          background-color: #138ed1;
+          border-color: #75cfff;
+          color: #ffffff;
+        }
+        label {
+          color: #2f2f2f;
+          font-family: "Montserrat";
+          @include typography(12px, 500, 25px);
+          font-style: normal;
+          span {
+            color: #2f2f2f;
+            font-family: "Montserrat";
+            font-style: normal;
+            @include typography(12px, 600, 25px);
+          }
+        }
+      }
+      button {
+        width: 236px;
+        height: 42px;
+        flex-shrink: 0;
+        border-radius: 6px;
+        background: #138ed1;
+        border: none;
+        color: #fff;
+        font-family: "Montserrat";
+        font-style: normal;
+        @include typography(20px, 500, 25px);
+      }
+    }
+    .offer-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-left: 130px;
+      .text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 470px;
+        height: 70px;
+        flex-shrink: 0;
+        border-radius: 35px;
+        border: 1px solid #fff;
+        background: #00486c;
+        p {
+          color: #fff;
+          font-family: "Inter";
+          font-style: normal;
+          @include typography(16px, 400, 24px);
+          span {
+            color: #fff;
+            font-family: "Inter";
+            font-style: normal;
+            @include typography(16px, 600, 24px);
+          }
+        }
+      }
+      .offer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 230px;
+        height: 68px;
+        flex-shrink: 0;
+        border-radius: 34px;
+        background: #00a6ff;
+        margin-left: -90px;
+        z-index: -1;
+        padding-left: 70px;
+        p {
+          color: #fff;
+          font-family: Inter;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px; /* 100% */
+        }
+      }
+    }
+  }
+  .right-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    .best-class-text {
+      display: flex;
+      flex-direction: column;
+      h1 {
+        color: #138ed1;
+        font-family: Montserrat;
+        font-style: normal;
+        @include typography(48px, 600, 70px);
+        span {
+          color: #333;
+          font-family: "Montserrat";
+          font-style: normal;
+          @include typography(48px, 600, 70px);
+        }
+      }
+      svg {
+        width: 314px;
+        height: 19px;
+        flex-shrink: 0;
+        stroke-width: 2px;
+        stroke: #008dd9;
+      }
+    }
+
+    img {
+      width: 502px;
+      height: 497px;
+      flex-shrink: 0;
+    }
+    .highlightes {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+    }
+    .text {
+      width: 85px;
+      height: 32.118px;
+      flex-shrink: 0;
+      color: #333;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(12px, 500, 18px);
+    }
+    & .card-1 {
+      top: 140px;
+      left: -30;
+      width: 166px;
+      height: 89px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: rgba(110, 110, 110, 0.22);
+      backdrop-filter: blur(12.5px);
+    }
+    & .card-2 {
+      top: 250px;
+      left: -80px;
+      width: 166px;
+      height: 89px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: rgba(110, 110, 110, 0.22);
+      backdrop-filter: blur(12.5px);
+    }
+    & .card-3 {
+      top: 350px;
+      left: 15px;
+      width: 166px;
+      height: 89px;
+      flex-shrink: 0;
+      border-radius: 13px;
+      background: rgba(110, 110, 110, 0.22);
+      backdrop-filter: blur(12.5px);
+    }
+  }
+}

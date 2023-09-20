@@ -1,0 +1,158 @@
+@import "../../style-config/mixins.scss";
+
+.header-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-around;
+  width: 1440px;
+  height: 83px;
+  flex-shrink: 0;
+  background: #fff;
+  .logo-container {
+    display: flex;
+    width: 277px;
+    height: 64px;
+    justify-content: center;
+    align-items: flex-start;
+    flex-shrink: 0;
+
+    .logo {
+      width: 63px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      width: 214px;
+      height: 64px;
+      flex-shrink: 0;
+    }
+  }
+  ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    li:nth-child(1) {
+      list-style: none;
+      width: 75px;
+      height: 40.488px;
+      flex-shrink: 0;
+      color: #000;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(16px, 400, 40px);
+      color: #000000;
+      &:hover {
+        color: #138ed1;
+        @include typography(20px, 600, 40px);
+      }
+    }
+    li:nth-child(2) {
+      list-style: none;
+      width: 220px;
+      height: 40.488px;
+      flex-shrink: 0;
+      color: #000;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(16px, 400, 40px);
+      &:hover {
+        color: #138ed1;
+        width: 213px;
+        @include typography(20px, 600, 40px);
+      }
+    }
+    li:nth-child(3) {
+      list-style: none;
+      width: 90px;
+      height: 40.488px;
+      flex-shrink: 0;
+      color: #000;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(16px, 400, 40px);
+      &:hover {
+        color: #138ed1;
+        @include typography(20px, 600, 40px);
+      }
+    }
+    li:nth-child(4) {
+      list-style: none;
+      width: 78px;
+      height: 40.488px;
+      flex-shrink: 0;
+      color: #000;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(16px, 400, 40px);
+      &:hover {
+        color: #138ed1;
+        @include typography(20px, 600, 40px);
+      }
+    }
+  }
+
+  .buttons-container {
+    display: flex;
+    gap: 17px;
+    .button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 113px;
+      height: 35px;
+      flex-shrink: 0;
+      border-radius: 4px;
+      background: #00486c;
+      button {
+        width: 85px;
+        height: 26px;
+        flex-shrink: 0;
+        color: #fff;
+        font-family: "Inter";
+        font-style: normal;
+        @include typography(14px, 400, 25px);
+        background-color: transparent;
+        border: none;
+      }
+      &:hover {
+        background-color: #138ed1;
+      }
+    }
+  }
+  .playbutton-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 115px;
+    height: 35px;
+    flex-shrink: 0;
+    border-radius: 4px;
+    background: #333;
+    .icon {
+      width: 21px;
+      height: 20.588px;
+      flex-shrink: 0;
+      color: #fff;
+      &:hover {
+        background-color: #138ed1;
+      }
+    }
+    button {
+      width: 61px;
+      height: 23.676px;
+      flex-shrink: 0;
+      color: #fff;
+      font-family: "Montserrat";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 25px; /* 208.333% */
+      background-color: transparent;
+      border: none;
+    }
+    &:hover {
+      background-color: #138ed1;
+    }
+  }
+}

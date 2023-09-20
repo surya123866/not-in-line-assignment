@@ -1,0 +1,26 @@
+@import "./variable.scss";
+
+@mixin typography($size: 18px, $weight: 400, $lineHeight: 24px) {
+  font-style: normal;
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $lineHeight;
+}
+
+@mixin small-screen {
+  @media only screen and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media only screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin large-screen {
+  @media only screen and (min-width: 1441px) {
+    @content;
+  }
+}
