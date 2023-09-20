@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import "./heroSection.scss";
 
 import image from "../../images/woman-microscop.png";
+import bloodTesTimg from "../../images/blood-test-man-clinic.webp";
+import examiningBrainImg from "../../images/examining-brain-x-ray-doctor.webp";
+import medicalReportImg from "../../images/medical-examination-report.webp";
 
 const HeroSection = () => {
   const [formData, setFormData] = useState({
@@ -233,21 +236,28 @@ const HeroSection = () => {
             <path
               d="M1 8.36268C20.6372 6.61131 40.967 5.55603 60.9677 4.41552C74.8119 3.62607 88.4275 3.00499 102.442 2.85026C117.266 2.68661 131.234 1.01279 146.251 1.01279C175.253 1.01279 203.705 0.772597 232.432 2.37388C248.34 3.2606 263.939 4.44926 279.653 5.6405C286.24 6.13989 292.535 7.1628 299.043 7.68213C304.376 8.10768 307.661 7.51359 311.97 8.97517C321.267 12.128 306.755 9.82949 300.749 9.31544C258.019 5.65823 211.933 6.10555 168.245 6.55923C150.598 6.7425 132.905 7.35134 115.28 7.75019C94.2024 8.22715 74.5062 11.4996 54.5042 13.807C53.7216 13.8973 16.5874 18.2861 17.5181 18.6389C18.5939 19.0467 22.9576 18.775 24.3407 18.775C38.0287 18.775 51.1362 17.7224 64.4689 16.6313C82.0958 15.1887 99.1572 15.1001 116.986 15.1001C155.933 15.1001 195.423 14.3815 234.048 16.1889C242.82 16.5994 265.253 16.9781 269.239 20"
               stroke="#008DD9"
-              stroke-width="2"
+              strokeWidth="2"
               stroke-linecap="round"
             />
           </svg>
         </div>
         <div>
-          <img src={`${image}`} alt="microscop-woman" />
-          <div className="highlightes card-1">
-            <p className="text">Timely sample collection</p>
-          </div>
-          <div className="highlightes card-2">
-            <p className="text">Complementary report consultation</p>
-          </div>
-          <div className="highlightes card-3">
-            <p className="text">Accurate timely reports</p>
+          <div
+            className="right-image-section"
+            style={{ backgroundImage: `url(${image})` }}
+          >
+            <div className="highlightes card-1">
+              <img src={`${bloodTesTimg}`} alt="sample colletcion" />
+              <p className="text">Timely sample collection</p>
+            </div>
+            <div className="highlightes card-2">
+              <img src={`${examiningBrainImg}`} alt="Complementary report" />
+              <p className="text">Complementary report consultation</p>
+            </div>
+            <div className="highlightes card-3">
+              <img src={`${medicalReportImg}`} alt="timly report" />
+              <p className="text">Accurate timely reports</p>
+            </div>
           </div>
         </div>
       </div>

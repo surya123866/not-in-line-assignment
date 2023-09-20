@@ -5,20 +5,21 @@
   display: flex;
   justify-content: space-around;
   width: 1440px;
-  height: 855px;
+  height: 610px;
   flex-shrink: 0;
   background: linear-gradient(
     90deg,
     #75cfff -17.97%,
     rgba(117, 207, 255, 0) 54.75%
   );
-  padding: 32px;
+  border-radius: 0% 100% 0% 100% / 70% 0% 100% 30%;
 
   .left-section {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
+    margin-top: 32px;
 
     form {
       display: flex;
@@ -183,55 +184,65 @@
       }
     }
 
-    img {
+    .right-image-section {
       width: 502px;
       height: 497px;
       flex-shrink: 0;
-    }
-    .highlightes {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-    }
-    .text {
-      width: 85px;
-      height: 32.118px;
-      flex-shrink: 0;
-      color: #333;
-      font-family: "Inter";
-      font-style: normal;
-      @include typography(12px, 500, 18px);
-    }
-    & .card-1 {
-      top: 140px;
-      left: -30;
-      width: 166px;
-      height: 89px;
-      flex-shrink: 0;
-      border-radius: 13px;
-      background: rgba(110, 110, 110, 0.22);
-      backdrop-filter: blur(12.5px);
-    }
-    & .card-2 {
-      top: 250px;
-      left: -80px;
-      width: 166px;
-      height: 89px;
-      flex-shrink: 0;
-      border-radius: 13px;
-      background: rgba(110, 110, 110, 0.22);
-      backdrop-filter: blur(12.5px);
-    }
-    & .card-3 {
-      top: 350px;
-      left: 15px;
-      width: 166px;
-      height: 89px;
-      flex-shrink: 0;
-      border-radius: 13px;
-      background: rgba(110, 110, 110, 0.22);
-      backdrop-filter: blur(12.5px);
+      background-size: cover;
+      .highlightes {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+      }
+      img {
+        width: 45px;
+        height: 44px;
+        flex-shrink: 0;
+        border-radius: 45px;
+      }
+      .text {
+        display: flex;
+        width: 95px;
+        height: 32.118px;
+        justify-content: center;
+        align-items: center;
+        flex-shrink: 0;
+        margin-left: 5px;
+        @include typography(12px, 500, 18px);
+      }
+      & .card-1 {
+        top: 140px;
+        left: -30;
+        width: 166px;
+        height: 89px;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: rgba(110, 110, 110, 0.22);
+        backdrop-filter: blur(12.5px);
+        gap: 12px;
+        
+      }
+      & .card-2 {
+        top: 250px;
+        left: -80px;
+        width: 166px;
+        height: 89px;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: rgba(110, 110, 110, 0.22);
+        backdrop-filter: blur(12.5px);
+      }
+      & .card-3 {
+        top: 350px;
+        left: 15px;
+        width: 166px;
+        height: 89px;
+        flex-shrink: 0;
+        border-radius: 13px;
+        background: rgba(110, 110, 110, 0.22);
+        backdrop-filter: blur(12.5px);
+      }
     }
   }
 }

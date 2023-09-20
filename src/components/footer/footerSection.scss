@@ -1,0 +1,123 @@
+@import "../../style-config/mixins.scss";
+@import "../../style-config/variable.scss";
+
+.footer-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 811px;
+  flex-shrink: 0;
+  background: #1f1f1f;
+  gap: 32px;
+  .footer-info-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    gap: 32px;
+    .info-container {
+      img {
+        width: 137px;
+        height: 137px;
+        flex-shrink: 0;
+      }
+      p {
+        width: 470px;
+        color: #fff;
+        font-family: "Montserrat";
+        font-style: normal;
+        @include typography(20px, 400, 30px);
+      }
+      .footer-input-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-content: space-between;
+        width: 471px;
+        height: 88px;
+        flex-shrink: 0;
+        border-radius: 14px;
+        background: rgba(255, 255, 255, 0.25);
+        backdrop-filter: blur(12.5px);
+        margin-top: 45px;
+        h1 {
+          color: #fff;
+          font-family: "Montserrat";
+          font-style: normal;
+          text-align: center;
+          width: 100px;
+          @include typography(24px, 600, 35px);
+        }
+        input {
+          width: 301px;
+          height: 100%;
+          flex-shrink: 0;
+          background-color: transparent;
+          color: #fff;
+          outline: none;
+          border-left: solid #fff 2px;
+          @include typography(24px, 600, 35px);
+        }
+        .phoneIcon-container {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 117px;
+          height: 88px;
+          flex-shrink: 0;
+          background-color: #00a6ff;
+          border-radius: 0 14px 14px 0;
+        }
+      }
+    }
+    .widgets-container {
+      display: flex;
+      justify-content: space-around;
+      width: 50%;
+      .widget {
+        h1 {
+          color: #fff;
+          font-family: "Montserrat";
+          font-style: normal;
+          margin-bottom: 20px;
+          @include typography(32px, 600, 35px);
+        }
+        ul {
+          li {
+            list-style: none;
+            color: #fff;
+            font-family: "Montserrat";
+            font-style: normal;
+            @include typography(20px, 400, 30px);
+          }
+        }
+      }
+    }
+  }
+
+  hr {
+    width: 1391px;
+    height: 1px;
+    background: #fff;
+  }
+  .copyrightText-container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 0 32px 32px;
+    .copyright-icon {
+      width: 27px;
+      height: 30px;
+      flex-shrink: 0;
+      color: #fff;
+    }
+    p {
+      color: #fff;
+      font-family: "Montserrat";
+      font-style: normal;
+      @include typography(20px, 500, 30px);
+    }
+  }
+}

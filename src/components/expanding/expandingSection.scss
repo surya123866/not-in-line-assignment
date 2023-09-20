@@ -1,0 +1,74 @@
+@import "../../style-config/mixins.scss";
+@import "../../style-config/variable.scss";
+
+.expanding-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+  h1 {
+    display: flex;
+    color: #333;
+    font-family: "Montserrat";
+    font-style: normal;
+    margin-right: 10px;
+    @include typography(48px, 600, 70px);
+    span {
+      display: flex;
+      flex-direction: column;
+      color: #138ed1;
+      font-family: "Montserrat";
+      font-style: normal;
+      margin-left: 10px;
+      @include typography(48px, 600, 70px);
+    }
+    svg {
+      width: 262px;
+      height: 19px;
+      flex-shrink: 0;
+      stroke-width: 2px;
+      stroke: #008dd9;
+      margin-right: 30px;
+    }
+  }
+  .highlightes-cards-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    padding: 60px;
+    .highlighte-card {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 138px;
+      height: 72px;
+      flex-shrink: 0;
+      border-radius: 16px;
+      border: 1px solid #138ed1;
+      background: #138ed1;
+      padding: 30px;
+      h1 {
+        color: #fff;
+        text-shadow: 0px 4px 50px #75cfff;
+        font-family: "Montserrat";
+        font-size: 24px;
+        font-style: normal;
+        text-align: center;
+        @include typography(24px, 600, 24px);
+      }
+      p {
+        width: 97px;
+        color: #fff;
+        text-align: center;
+        font-family: "Montserrat";
+        font-style: normal;
+        text-align: center;
+        @include typography(14px, 500, 18px);
+      }
+    }
+  }
+}
