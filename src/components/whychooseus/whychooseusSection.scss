@@ -6,21 +6,46 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
+  width: 1440px;
   padding-bottom: 30px;
   padding-top: -30px;
-  background-color: #00a6ff17;
+  position: relative;
+  @include small-screen {
+    width: 400px;
+    flex-shrink: 0;
+  }
+  svg {
+    position: absolute;
+    z-index: -1;
+    @include small-screen {
+      width: 400px;
+      flex-shrink: 0;
+    }
+  }
   .title-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 32px;
     margin-bottom: 80px;
+    @include small-screen {
+      gap: 14px;
+      margin-bottom: 20px;
+    }
     h1 {
       display: flex;
       color: #333;
       font-family: "Montserrat";
       font-style: normal;
       @include typography(48px, 600, 70px);
+      @include small-screen {
+        color: #2f2f2f;
+        font-family: "Montserrat";
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 35px; /* 145.833% */
+      }
       span {
         display: flex;
         flex-direction: column;
@@ -29,6 +54,14 @@
         font-style: normal;
         margin-left: 10px;
         @include typography(48px, 600, 70px);
+        @include small-screen {
+          color: #008dd9;
+          font-family: "Montserrat";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 35px;
+        }
       }
       svg {
         width: 150px;
@@ -36,6 +69,14 @@
         flex-shrink: 0;
         stroke-width: 2px;
         stroke: #008dd9;
+        position: relative;
+        @include small-screen {
+          width: 91px;
+          height: 8px;
+          flex-shrink: 0;
+          stroke-width: 1px;
+          stroke: #008dd9;
+        }
       }
     }
     p {
@@ -45,12 +86,27 @@
       font-family: "Montserrat";
       font-style: normal;
       @include typography(24px, 500, 40px);
+      @include small-screen {
+        width: 298px;
+        color: #6e6e6e;
+        text-align: center;
+        font-family: "Montserrat";
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 15px; /* 150% */
+      }
     }
   }
   .whychooseUs-cards-container {
     display: flex;
     align-items: center;
     width: 100%;
+    @include small-screen {
+      flex-direction: column;
+      background-color: #00a6ff2d;
+      padding-bottom: 40px;
+    }
     .whychooseUs-cards {
       position: absolute;
       display: flex;
@@ -58,19 +114,40 @@
       width: 100%;
       gap: 32px;
       margin-left: 50px;
-      .card-1{
+      @include small-screen {
+        flex-direction: column;
+        position: unset;
+        margin-left: unset;
+      }
+      .card-1 {
         margin: 10px;
         bottom: 100px;
+        @include small-screen {
+          margin: unset;
+          bottom: unset;
+        }
       }
-      .card-2{
+      .card-2 {
         margin: 10px;
+        @include small-screen {
+          margin: unset;
+          margin-top: 20px;
+        }
       }
-      .card-3{
+      .card-3 {
         margin: 10px;
+        @include small-screen {
+          margin: unset;
+        }
       }
-      .card-4{
+      .card-4 {
         margin: 10px;
         top: 100px;
+        @include small-screen {
+          margin: unset;
+          top: unset;
+          margin-top: 20px;
+        }
       }
       .whychooseUs-card {
         display: flex;
@@ -85,6 +162,16 @@
         background: #fff;
         box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
         position: relative;
+        @include small-screen {
+          flex-direction: row;
+          width: 312px;
+          height: 153px;
+          flex-shrink: 0;
+          border-radius: 38.5px;
+          background: #fff;
+          box-shadow: 0px 4px 15px 0px rgba(0, 0, 0, 0.25);
+          gap: 10px;
+        }
         img {
           position: absolute;
           width: 120px;
@@ -94,6 +181,16 @@
           border: 3px solid #fff;
           left: 275px;
           bottom: 170px;
+          @include small-screen {
+            width: 40px;
+            height: 40px;
+            flex-shrink: 0;
+            border-radius: 40px;
+            border: 3px solid #fff;
+            left: unset;
+            bottom: unset;
+            position: unset;
+          }
         }
         h1 {
           width: 258px;
@@ -103,15 +200,35 @@
           font-style: normal;
           font-weight: 600;
           line-height: 35px; /* 125% */
+          @include small-screen {
+            color: #2f2f2f;
+            text-align: center;
+            font-family: "Montserrat";
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px; /* 285.714% */
+          }
         }
         p {
-          width: 278px;
+          width: 320px;
           color: #2f2f2f;
           font-family: "Montserrat";
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
-          line-height: 24px; /* 133.333% */
+          line-height: 24px;
+          margin-top: 20px;
+          @include small-screen {
+            width: 184px;
+            color: #2f2f2f;
+            font-family: "Montserrat";
+            font-size: 10px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px; /* 180% */
+            margin-top: unset;
+          }
         }
       }
     }
@@ -122,6 +239,49 @@
       flex-shrink: 0;
       left: 550px;
       margin-bottom: -30px;
+      @include small-screen {
+        width: 359px;
+        height: 279px;
+        flex-shrink: 0;
+        position: unset;
+        display: none;
+      }
+    }
+  }
+  .bg-text {
+    z-index: -1;
+    position: absolute;
+    width: 100%;
+    top: 50px;
+    gap: -10px;
+    top: 180px;
+    @include small-screen {
+      gap: 100px;
+    }
+    h2:nth-child(1) {
+      font-size: 230px;
+      color: transparent;
+      -webkit-text-stroke: 2px #00a6ff2d;
+      @include small-screen {
+        font-size: 80px;
+        display: flex;
+        align-self: flex-end;
+      }
+    }
+    h2:nth-child(2) {
+      font-size: 230px;
+      color: #00a6ff17;
+      @include small-screen {
+        font-size:  80px;;
+      }
+    }
+    h2:nth-child(3) {
+      font-size:  230px;;
+      color: transparent;
+      -webkit-text-stroke: 2px #00a6ff2d;
+      @include small-screen {
+        font-size: 80px;
+      }
     }
   }
 }

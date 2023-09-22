@@ -1,103 +1,117 @@
 @import "../../style-config/mixins.scss";
 @import "../../style-config/mixins.scss";
 
-.header-container {
+.top-navigation-bar {
+  width: 1441px;
+  height: 80px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   justify-content: space-around;
-  width: 1440px;
-  height: 83px;
-  flex-shrink: 0;
-  background: #fff;
-
+  align-items: center;
+  padding-left: 20px;
+  padding-right: 30px;
+  @include small-screen {
+    justify-content: space-between;
+    width: 400px;
+    margin-top: 10px;
+  }
   .logo-container {
     display: flex;
     width: 277px;
-    height: 64px;
-    justify-content: center;
-    align-items: flex-start;
     flex-shrink: 0;
-
-    .logo {
+    @include small-screen {
+      width: 150px;
+    }
+    img:nth-child(1) {
       width: 63px;
       height: 64px;
       flex-shrink: 0;
+      @include small-screen {
+        width: 28.884px;
+        height: 29px;
+        flex-shrink: 0;
+      }
     }
-    .logo-text {
+    img:nth-child(2) {
       width: 214px;
       height: 64px;
       flex-shrink: 0;
+      @include small-screen {
+        width: 98.116px;
+        height: 29px;
+        flex-shrink: 0;
+      }
     }
   }
-  ul {
+  .mobile-menu {
+    display: none;
+    @include small-screen {
+      margin-left: 100px;
+      width: 100%;
+      display: inline;
+      position: relative;
+      z-index: 99;
+    }
+  }
+  .navigation {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    li:nth-child(1) {
-      list-style: none;
-      width: 75px;
-      height: 40.488px;
-      flex-shrink: 0;
-      color: #000;
-      font-family: "Inter";
-      font-style: normal;
-      @include typography(16px, 400, 40px);
-      color: #000000;
-      &:hover {
-        color: #138ed1;
-        @include typography(20px, 600, 40px);
-      }
+    flex-direction: row;
+    justify-content: flex-end;
+    position: relative;
+    height: auto;
+    gap: unset;
+    background-color: transparent;
+    @include small-screen {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: #00a6ffeb;
+      z-index: 9;
+      display: none;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
     }
-    li:nth-child(2) {
-      list-style: none;
-      width: 220px;
-      height: 40.488px;
-      flex-shrink: 0;
-      color: #000;
-      font-family: "Inter";
-      font-style: normal;
-      @include typography(16px, 400, 40px);
-      &:hover {
-        color: #138ed1;
-        width: 213px;
-        @include typography(20px, 600, 40px);
-      }
+    &.active {
+      width: 100%;
+      display: flex;
     }
-    li:nth-child(3) {
-      list-style: none;
-      width: 90px;
+    .navigation-item {
+      display: flex;
+      justify-content: space-evenly;
+      width: 150px;
       height: 40.488px;
       flex-shrink: 0;
       color: #000;
       font-family: "Inter";
       font-style: normal;
-      @include typography(16px, 400, 40px);
-      &:hover {
-        color: #138ed1;
-        @include typography(20px, 600, 40px);
+      @include typography(16px, 600, 40px);
+      cursor: pointer;
+      @include small-screen {
+        color: #fff;
+        margin-top: 20px;
+        flex-direction: column;
+        @include typography(18px, 400, 20px);
       }
-    }
-    li:nth-child(4) {
-      list-style: none;
-      width: 78px;
-      height: 40.488px;
-      flex-shrink: 0;
-      color: #000;
-      font-family: "Inter";
-      font-style: normal;
-      @include typography(16px, 400, 40px);
       &:hover {
+        width: 200px;
         color: #138ed1;
         @include typography(20px, 600, 40px);
       }
     }
   }
-
   .buttons-container {
     display: flex;
-    gap: 17px;
-    .button {
+    align-items: center;
+    width: 303px;
+    height: 35px;
+    gap: 10px;
+    flex-shrink: 0;
+    @include small-screen {
+      display: none;
+    }
+    button {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -105,53 +119,45 @@
       height: 35px;
       flex-shrink: 0;
       border-radius: 4px;
-      background: #00486c;
-      button {
-        width: 85px;
-        height: 26px;
+      background-color: #00486c;
+      color: #fff;
+      font-family: "Inter";
+      font-style: normal;
+      @include typography(14px, 400, 25px);
+      border: none;
+      .playstore-icon {
+        width: 21px;
+        height: 20.588px;
         flex-shrink: 0;
         color: #fff;
-        font-family: "Inter";
-        font-style: normal;
-        @include typography(14px, 400, 25px);
-        background-color: transparent;
-        border: none;
       }
       &:hover {
         background-color: #138ed1;
       }
     }
   }
-  .playbutton-container {
+  .playbutton {
     display: flex;
-    align-items: center;
     justify-content: center;
-    width: 115px;
+    align-items: center;
+    width: 113px;
     height: 35px;
     flex-shrink: 0;
     border-radius: 4px;
-    background: #333;
-    .icon {
+    background-color: #000;
+    color: #fff;
+    font-family: "Inter";
+    font-style: normal;
+    border: none;
+    @include typography(14px, 400, 25px);
+    @include small-screen {
+      display: none;
+    }
+    .playstore-icon {
       width: 21px;
       height: 20.588px;
       flex-shrink: 0;
       color: #fff;
-      &:hover {
-        background-color: #138ed1;
-      }
-    }
-    button {
-      width: 61px;
-      height: 23.676px;
-      flex-shrink: 0;
-      color: #fff;
-      font-family: "Montserrat";
-      font-size: 12px;
-      font-style: normal;
-      font-weight: 600;
-      line-height: 25px; /* 208.333% */
-      background-color: transparent;
-      border: none;
     }
     &:hover {
       background-color: #138ed1;

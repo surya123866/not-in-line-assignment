@@ -1,21 +1,22 @@
-import "./App.scss";
-import ExpandingSection from "./components/expanding/expandingSection";
-import FooterSection from "./components/footer/footerSection";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-import HeaderSection from "./components/header/headerSection";
-import HeroSection from "./components/hero/heroSection";
-import Packages from "./components/packages/packages";
-import WhychooseusSection from "./components/whychooseus/whychooseusSection";
+import "./App.scss";
+import Homepage from "./components/home/homepage";
+import PatientsSection from "./components/patients/patientsSection";
+import DoctorsSection from "./components/doctors/doctorsSection";
+import NotFound from "./components/notFound/notFound";
 
 function App() {
   return (
     <div className="App">
-      <HeaderSection />
-      <HeroSection />
-      <ExpandingSection />
-      <Packages />
-      <WhychooseusSection />
-      <FooterSection/>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path="/" element={<Homepage />} />
+          <Route exact path="/doctors" element={<DoctorsSection />} />
+          <Route exact path="/patients" element={<PatientsSection />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
     </div>
   );
 }
